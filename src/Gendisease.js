@@ -46,7 +46,7 @@ function Gendisease() {
         e.preventDefault();
         var myParams = selectedValue
 
-        await axios.post('http://127.0.0.1:5000/generalprediction', myParams)
+        await axios.post('https://diabetessapi.herokuapp.com/generalprediction', myParams)
         .then(function(response){
             console.log(response.data);
             // if (response.status === 200){
