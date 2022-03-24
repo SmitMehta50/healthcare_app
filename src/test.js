@@ -1,30 +1,52 @@
-// https://www.digitalocean.com/community/tutorials/processing-incoming-request-data-in-flask
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 
-import React from 'react'
-import axios from 'axios'
+function Pneumonia() {
+    const [image, setImage] = useState([]);
+    const [imageURL, setImageURL] = useState([]);
+    const [message, setMessage] = useState("");
 
-function Test(props) {
-    var myParams = {
-        sympton1: props.sympton1,
-        sympton2: props.sympton2,
-        sympton3: props.sympton3,
-        sympton4: props.sympton4,
-        sympton5: props.sympton5
+    useEffect(()=>{
+        if (image.length < 1) return;
+        const newImageUrl = [];
+        image.forEach(image => newImageUrl.push(URL.createObjectURL(image)));
+        setImageURL(newImageUrl);
+    }, [image]);
+
+    function onImageChange(e){
+        setImage([e.target.files[0]])
     }
 
-    axios.post('http://localhost:5000/', myParams)
+    let handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        formData.append(
+            "file",
+            image,
+        )
+
+        await axios.post('http://127.0.0.1:5000/pneumonia', formData)
         .then(function(response){
             console.log(response);
-            const res = response;
+            
+            var res = response
+            if (res.status === 200){
+            setMessage(response)
+            }else{setMessage("Error Occured")}
+            // setMessage(response)
        //Perform action based on response
-        })
-    
-    return(
-        <div>
-            <p>Hello</p>
-        </div>
-    );
-        
+        }).catch((error)=>console.log(error));
+      };
+  return (
+    <div>
+        <h1>Pneumonia</h1>
+        <form onSubmit={handleSubmit}>
+            <input type="file" name='file' accept='image/*' onChange={onImageChange}/>
+            {imageURL.map(imageSrc => <img src={imageSrc}/>)}
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+  )
 }
 
-export default Test
+export default Pneumonia

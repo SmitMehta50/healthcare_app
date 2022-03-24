@@ -3,6 +3,8 @@ import './App.css';
 import Diabetes from './Diabetes';
 import Heart from './Heart';
 import Gendisease from './Gendisease';
+import Pneumonia from './Pneumonia'
+// import Test from './test';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Diabetes/>
       <Heart/>
       <Gendisease/>
+      <Pneumonia/>
+      {/* <Test/> */}
     </div>
   );
 }
