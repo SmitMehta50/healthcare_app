@@ -4,7 +4,7 @@ import Diabetes from './Diabetes';
 import Heart from './Heart';
 import Gendisease from './Gendisease';
 import Pneumonia from './Pneumonia';
-import {Route, Link, Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import Home from './Home';
 // import Test from './test';
 

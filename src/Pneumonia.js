@@ -50,7 +50,7 @@ function Pneumonia() {
                 <p>File Type: {selectedfile.type}</p>
 
                 {/* {imageURL.map(imageSrc => <img src={imageSrc}/>)} */}
-                <img src={imageURL}/>
+                <img src={imageURL} alt={selectedfile.name}/>
                 <p>{message}</p>
     
                             

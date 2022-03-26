@@ -27,6 +27,26 @@ function Gendisease() {
         {
           value: "anxiety",
           label: "Anxiety"
+        },
+        {
+          value: "back_pain",
+          label: "BackPain"
+        },
+        {
+          value: "belly_pain",
+          label: "Belly Pain"
+        },
+        {
+          value: "bladder_discomfort",
+          label: "Bladder Discomfort"
+        },
+        {
+          value: "blister",
+          label: "Blister"
+        },
+        {
+          value: "blood_in_sputum",
+          label: "Blood In Sputum"
         }
       ];
     
@@ -41,6 +61,7 @@ function Gendisease() {
       const handleChange = (e) => {
         setSelectedValue(Array.isArray(e) ? e.map(x => x.value) : []);
       }
+      
 
       let handleSubmit = async (e) => {
         e.preventDefault();
@@ -51,8 +72,8 @@ function Gendisease() {
             console.log(response.data);
             // if (response.status === 200){
             setMessage(response.data[0].prediction)
-            setDiscription(response.data[2].discription[message])
-            setTreatment(response.data[3].treatment[message])
+            setDiscription(response.data[2].discription)
+            setTreatment(response.data[3].treatment)
             setRate(response.data[1]["rate"])
             // }else{setMessage("Error Occured")}
             // setMessage(response)
@@ -81,8 +102,8 @@ function Gendisease() {
 
         <div className="message"><h3>Status :</h3> {message }</div>
         <div className="prob"><h3>Description :</h3> {discription}</div>
-        <div><h3>Treatment :</h3>{JSON.stringify(treatment, null, 2)}</div>
-        <div><h3>Rate :</h3>{JSON.stringify(rate, null, 2)}</div>
+        <div><h3>Treatment :</h3>{JSON.stringify(treatment)}</div>
+        <div><h3>Rate :</h3>{JSON.stringify(rate)}</div>
         
       </form>
       
