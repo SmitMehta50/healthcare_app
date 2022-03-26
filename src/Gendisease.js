@@ -1,54 +1,10 @@
 import React, {useState} from 'react';
 import Select from 'react-select';
+import diseaselist from './diseaselist';
 import axios from 'axios';
 
 function Gendisease() {
-    const data = [
-        {
-          value: "abdominal_pain",
-          label: "Abdominal Pain"
-        },
-        {
-          value: "abnormal_menstruation",
-          label: "Abdominal Menstruation"
-        },
-        {
-          value: "acidity",
-          label: "Acidity"
-        },
-        {
-          value: "acute_liver_failure",
-          label: "Acute Live Failure"
-        },
-        {
-          value: "altered_sensorium",
-          label: "Altered Sensorium"
-        },
-        {
-          value: "anxiety",
-          label: "Anxiety"
-        },
-        {
-          value: "back_pain",
-          label: "BackPain"
-        },
-        {
-          value: "belly_pain",
-          label: "Belly Pain"
-        },
-        {
-          value: "bladder_discomfort",
-          label: "Bladder Discomfort"
-        },
-        {
-          value: "blister",
-          label: "Blister"
-        },
-        {
-          value: "blood_in_sputum",
-          label: "Blood In Sputum"
-        }
-      ];
+    const data = diseaselist
     
       // set value for default selection
       const [selectedValue, setSelectedValue] = useState([""]);
@@ -61,7 +17,7 @@ function Gendisease() {
       const handleChange = (e) => {
         setSelectedValue(Array.isArray(e) ? e.map(x => x.value) : []);
       }
-      
+
 
       let handleSubmit = async (e) => {
         e.preventDefault();
@@ -75,6 +31,7 @@ function Gendisease() {
             setDiscription(response.data[2].discription)
             setTreatment(response.data[3].treatment)
             setRate(response.data[1]["rate"])
+        
             // }else{setMessage("Error Occured")}
             // setMessage(response)
        //Perform action based on response
@@ -104,7 +61,6 @@ function Gendisease() {
         <div className="prob"><h3>Description :</h3> {discription}</div>
         <div><h3>Treatment :</h3>{JSON.stringify(treatment)}</div>
         <div><h3>Rate :</h3>{JSON.stringify(rate)}</div>
-        
       </form>
       
     </div>
