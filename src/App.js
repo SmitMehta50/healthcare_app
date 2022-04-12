@@ -6,6 +6,8 @@ import Gendisease from './Gendisease';
 import Pneumonia from './Pneumonia';
 import {Route, Routes} from 'react-router-dom';
 import Home from './Home';
+import Kidney from './Kidney';
+import Liver from './Liver';
 // import Test from './test';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route exact path="/pneumonia" element={<Pneumonia/>} />
         <Route exact path="/generaldisease" element={<Gendisease/>} />
         <Route exact path="/heart" element={<Heart/>} />
+        <Route exact path="/kidney" element={<Kidney/>} />
+        <Route exact path="/liver" element={<Liver/>} />
       </Routes>
 
       {/* <Diabetes/>

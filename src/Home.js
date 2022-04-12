@@ -18,6 +18,12 @@ function Home() {
             <button>
             <Link to="/heart">HEART</Link>
             </button>
+            <button>
+            <Link to="/kidney">KIDNEY</Link>
+            </button>
+            <button>
+            <Link to="/liver">LIVER</Link>
+            </button>
         </ul>
 
     </div>
