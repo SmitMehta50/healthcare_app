@@ -9,7 +9,6 @@ import Home from './Home';
 import Kidney from './Kidney';
 import Liver from './Liver';
 import Nav from './Nav'
-import Featuresection from './Featuresection'
 // import Test from './test';
 
 function App() {
