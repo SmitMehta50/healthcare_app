@@ -8,11 +8,14 @@ import {Route, Routes} from 'react-router-dom';
 import Home from './Home';
 import Kidney from './Kidney';
 import Liver from './Liver';
+import Nav from './Nav'
+import Featuresection from './Featuresection'
 // import Test from './test';
 
 function App() {
   return (
     <div className="App">
+      <Nav/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/diabetes" element={<Diabetes/>} />
@@ -21,6 +24,7 @@ function App() {
         <Route exact path="/heart" element={<Heart/>} />
         <Route exact path="/kidney" element={<Kidney/>} />
         <Route exact path="/liver" element={<Liver/>} />
+        
       </Routes>
 
       {/* <Diabetes/>
