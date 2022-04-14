@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios'
+import Nav from './Nav'
 
 function Liver() {
     const [age, setAge] = useState("");
@@ -47,7 +48,8 @@ function Liver() {
 
   return (
     <div>
-        <h1>Liver</h1>
+      <Nav/>
+        <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Liver</h1>
         <form onSubmit={handleSubmit}>
             <input
             type="number"

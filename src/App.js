@@ -8,13 +8,11 @@ import {Route, Routes} from 'react-router-dom';
 import Home from './Home';
 import Kidney from './Kidney';
 import Liver from './Liver';
-import Nav from './Nav'
 // import Test from './test';
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/diabetes" element={<Diabetes/>} />

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios'
+import Nav from './Nav'
 
 
 function Diabetes() {
@@ -42,6 +43,7 @@ function Diabetes() {
       };
   return (
     <div>
+      <Nav/>
         <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Diabetes</h1>
         <form className='w-full' onSubmit={handleSubmit}>
           <div className='flex flex-wrap mx-3 mb-6'>
