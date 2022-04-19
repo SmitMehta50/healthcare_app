@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Select from 'react-select';
 import diseaselist from './diseaselist';
 import axios from 'axios';
-import Nav from './Nav'
+// import Nav from './Nav'
 
 function Gendisease() {
     const data = diseaselist
@@ -40,7 +40,6 @@ function Gendisease() {
       };
   return (
     <div>
-      <Nav/>
         <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Gendisease</h1>
 
       

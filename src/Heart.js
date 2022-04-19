@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios'
-import Nav from './Nav'
+import ScrollToTop from './ScroolToTop';
+// import Nav from './Nav'
 
 function Heart() {
     const [age, setAge] = useState("");
@@ -18,6 +19,7 @@ function Heart() {
     const [trestbps, setTrestbps] = useState("");
     const [message, setMessage] = useState("");
     const [prob, setProb] = useState("");
+    const [submit, setSubmit] = useState(false)
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -36,6 +38,7 @@ function Heart() {
             thalach: thalach,
             trestbps: trestbps
         }
+        setSubmit(true)
 
         await axios.post('https://diabetessapi.herokuapp.com/heart', myParams)
         .then(function(response){
@@ -50,10 +53,25 @@ function Heart() {
         }).catch((error)=>console.log(error));
       };
 
+      const fileData = () => {
+        if (submit){
+        return(
+          <div>
+            <ScrollToTop>
+            <div className="message">Status{message ? <p>{message}</p> : null}</div>
+            <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div>
+
+            </ScrollToTop>
+            
+          </div>
+        );
+      }
+      }
+
   return (
     <div>
-      <Nav/>
         <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Heart</h1>
+        {fileData()}
         {/* <form onSubmit={handleSubmit}>
             <input
             type="number"
@@ -329,8 +347,8 @@ function Heart() {
               </button>
             </div>
           </div>
-          <div className="message">Status{message ? <p>{message}</p> : null}</div>
-          <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div>
+          {/* <div className="message">Status{message ? <p>{message}</p> : null}</div>
+          <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div> */}
           
         </form>
     </div>

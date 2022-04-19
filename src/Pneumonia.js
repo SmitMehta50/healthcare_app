@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react'
-import Nav from './Nav'
+// import Nav from './Nav'
 
 function Pneumonia() {
     const [selectedfile, setSelectedfile] = useState([]);
@@ -75,7 +75,6 @@ function Pneumonia() {
     
   return (
     <div>
-        <Nav/>
         <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Pneumonia</h1>
         
 			<h3>
