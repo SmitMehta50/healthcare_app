@@ -56,7 +56,7 @@ function Gendisease() {
         {selectedValue && <div style={{ marginTop: 20, lineHeight: '25px' }}>
             <div><b>Selected Value: </b> {JSON.stringify(selectedValue, null, 2)}</div>
         </div>}
-        <button type="submit">Submit</button>
+        <button className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded' type="submit">Submit</button>
 
         <div className="message"><h3>Status :</h3> {message }</div>
         <div className="prob"><h3>Description :</h3> {discription}</div>

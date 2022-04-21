@@ -1,4 +1,5 @@
 import React from 'react'
+// import Diabetes from './Diabetes'
 
 function Patient() {
   return (

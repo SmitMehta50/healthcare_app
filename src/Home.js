@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import Featuresection from './Featuresection';
 // import Nav from './Nav'
+// import Getlocation from './Getlocation';
 
 function Home() {
   return (
@@ -37,36 +38,9 @@ function Home() {
             </div>
           </main>
           <Featuresection/>
+          {/* <Getlocation/> */}
 
-        <div className=' mx-auto max-w-7xl px-4 sm:my-10  lg:mt-20 lg:px-8 xl:mt-28'>
-        <div className=' items-center justify-between h-16  mt-5 sm:mt-8 sm:flex sm:justify-center space-x-12 lg:justify-start sm:flex-row '>
-            <Link to="/diabetes">
-              <button className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10'>
-              DIABETES</button>
-            </Link>
-            <Link to="/pneumonia">
-              <button className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10'>
-              PNEUMONIA</button>
-            </Link>
-            <Link to="/generaldisease">
-              <button className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10'>
-              DISEASE PREDICTION</button>
-            </Link>
-            <Link to="/heart">
-              <button className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10'>
-              HEART</button>
-            </Link>
-            <Link to="/kidney">
-              <button className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10'>
-              KIDNEY</button>
-            </Link>
-            <Link to="/liver">
-              <button className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10'>
-              LIVER</button>
-            </Link>
-            
-        </div>
-        </div>
+        
 
     </div>
   )

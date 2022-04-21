@@ -38,14 +38,14 @@ function Diabetes() {
             if (res.status === 200){
             setMessage(response.data.message)
             setProb(response.data.probability)
-            }else{setMessage("Error Occured")}
+            }else{setMessage("error")}
             // setMessage(response)
        //Perform action based on response
         }).catch((error)=>console.log(error));
       };
 
       const fileData = () => {
-        if (submit){
+        if (submit && message && prob){
         return(
           <div>
             <div className="message">Status{message ? <p>{message}</p> : null}</div>

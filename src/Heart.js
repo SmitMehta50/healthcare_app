@@ -54,7 +54,7 @@ function Heart() {
       };
 
       const fileData = () => {
-        if (submit){
+        if (submit && message && prob){
         return(
           <div>
             <ScrollToTop>

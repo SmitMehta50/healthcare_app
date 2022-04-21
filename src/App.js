@@ -11,6 +11,7 @@ import Liver from './Liver';
 import Nav from './Nav'
 import Patient from './Patient'
 import Doctor from './Doctor'
+import Getlocation from './Getlocation';
 // import Test from './test';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/liver" element={<Liver/>} />
         <Route exact path="/patient" element={<Patient/>} />
         <Route exact path="/doctor" element={<Doctor/>} />
+        <Route exact path="/getlocation" element={<Getlocation/>} />
         
         
       </Routes>
