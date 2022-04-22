@@ -31,7 +31,7 @@ function Pneumonia() {
 
         console.log(selectedfile)
 
-        await axios.post("https://pneumoniaapi.herokuapp.com/", formData)
+        await axios.post("https://pneumonia-apis.herokuapp.com/", formData)
         .then(function(response){
             console.log(response.data.message)
             setMessage(response.data.message)
