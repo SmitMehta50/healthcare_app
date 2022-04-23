@@ -12,7 +12,7 @@ import Nav from './Nav'
 import Patient from './Patient'
 import Doctor from './Doctor'
 import Getlocation from './Getlocation';
-// import Test from './test';
+import Test from './test';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         <Route exact path="/liver" element={<Liver/>} />
         <Route exact path="/patient" element={<Patient/>} />
         <Route exact path="/doctor" element={<Doctor/>} />
-        <Route exact path="/getlocation" element={<Getlocation/>} />
+        <Route exact path="/getlocation" element={<Test/>} />
         
         
       </Routes>
