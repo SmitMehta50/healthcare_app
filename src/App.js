@@ -11,7 +11,6 @@ import Liver from './Liver';
 import Nav from './Nav'
 import Patient from './Patient'
 import Doctor from './Doctor'
-import Getlocation from './Getlocation';
 import Test from './test';
 
 function App() {
