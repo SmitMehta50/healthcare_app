@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios'
-import ScrollToTop from './ScroolToTop';
+// import ScrollToTop from './ScroolToTop';
+import Modal from './Modal'
 // import Nav from './Nav'
 
 function Heart() {
@@ -19,7 +20,8 @@ function Heart() {
     const [trestbps, setTrestbps] = useState("");
     const [message, setMessage] = useState("");
     const [prob, setProb] = useState("");
-    const [submit, setSubmit] = useState(false)
+    // const [submit, setSubmit] = useState(false)
+    const [open, setOpen] = useState(false)
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -38,11 +40,11 @@ function Heart() {
             thalach: thalach,
             trestbps: trestbps
         }
-        setSubmit(true)
+        // setSubmit(true)
 
         await axios.post('https://diabetessapi.herokuapp.com/heart', myParams)
         .then(function(response){
-            console.log(response);
+            console.log(response.data);
             var res = response
             if (res.status === 200){
             setMessage(response.data.message)
@@ -53,25 +55,25 @@ function Heart() {
         }).catch((error)=>console.log(error));
       };
 
-      const fileData = () => {
-        if (submit && message && prob){
-        return(
-          <div>
-            <ScrollToTop>
-            <div className="message">Status{message ? <p>{message}</p> : null}</div>
-            <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div>
+      // const fileData = () => {
+      //   if (submit && message && prob){
+      //   return(
+      //     <div>
+      //       <ScrollToTop>
+      //       <div className="message">Status{message ? <p>{message}</p> : null}</div>
+      //       <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div>
 
-            </ScrollToTop>
+      //       </ScrollToTop>
             
-          </div>
-        );
-      }
-      }
+      //     </div>
+      //   );
+      // }
+      // }
 
   return (
     <div>
         <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Heart</h1>
-        {fileData()}
+        {/* {fileData()} */}
         {/* <form onSubmit={handleSubmit}>
             <input
             type="number"
@@ -342,11 +344,18 @@ function Heart() {
           <div className='md:flex lg:flex md:items-center lg:items-center'>
             <div className='md:w-1/3'></div>
             <div className='md:w-1/3'>
-              <button className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded' type="submit">
+              <button onClick={() => setOpen(true)} className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded' type="submit">
                 Submit
               </button>
             </div>
           </div>
+          
+          <div>{message ? <Modal
+          open = {open}
+          setOpen = {setOpen}
+          status ={message}
+          prob= {prob*100}
+          ></Modal> : null}</div>
           {/* <div className="message">Status{message ? <p>{message}</p> : null}</div>
           <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div> */}
           

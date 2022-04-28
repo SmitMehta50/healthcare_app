@@ -1,14 +1,55 @@
 import React from 'react';
+import axios from 'axios'
 // import {Link} from 'react-router-dom';
 import Featuresection from './Featuresection';
+// import Modal from './Modal';
 // import Nav from './Nav'
 // import Getlocation from './Getlocation';
 
 function Home() {
+  React.useEffect(()=>{
+
+        axios.get('https://kidneydisease-api.herokuapp.com/kidney')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://diabetessapi.herokuapp.com/diabetes')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://diabetessapi.herokuapp.com/generalprediction')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://diabetessapi.herokuapp.com/heart')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://pneumonia-apis.herokuapp.com/')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://kidneydisease-api.herokuapp.com/liver')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://kidneydisease-api.herokuapp.com/hospitaldata')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+    },[]);
+
   return (
-    <div>
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <div className="sm:text-center lg:text-left">
+    <div className=' bg-auto'>
+          <main className=" w-auto py-20 px-10 ">
+            <div className="sm:text-center lg:text-left ">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Enrich your</span>{' '}
                 <span className="block text-indigo-600 xl:inline">health</span>
@@ -38,6 +79,7 @@ function Home() {
             </div>
           </main>
           <Featuresection/>
+          {/* <Modal state_value={true} /> */}
           {/* <Getlocation/> */}
 
         

@@ -1,42 +1,49 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+// import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline';
+import {ReactComponent as GenrealImg} from '../src/assets/generalImg.svg'
+import {ReactComponent as DiabetesImg} from '../src/assets/diabetes_measureImg.svg'
+import {ReactComponent as PneumoniaImg} from '../src/assets/pneumoniaImg.svg'
+import {ReactComponent as HeartImg} from '../src/assets/heartImg.svg'
+import {ReactComponent as LiverImg} from '../src/assets/liverImg.svg'
+import {ReactComponent as KidneyImg} from '../src/assets/kidneysImg.svg'
+// import { ReactComponent as YourSvg } from './your-svg.svg';
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: 'General Disease Prediction',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: GlobeAltIcon,
+    icon: GenrealImg,
   },
   {
-    name: 'No hidden fees',
+    name: 'Diabetes Prediction',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
+    icon: DiabetesImg,
   },
   {
-    name: 'Transfers are instant',
+    name: 'Pneumonia Prediction',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
+    icon: PneumoniaImg,
   },
   {
-    name: 'Mobile notifications',
+    name: 'Heart Disease Prediction',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
+    icon: HeartImg,
   },
   {
-    name: 'Mobile notifications',
+    name: 'Liver Disease Prediction',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
+    icon: LiverImg,
   },
   {
-    name: 'Mobile notifications',
+    name: 'Kidney Disease Prediction',
     description:
       'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
+    icon: KidneyImg,
   },
 ]
 
@@ -46,7 +53,7 @@ export default function Example() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            A better way to send money
+            A better way toward health
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
@@ -59,8 +66,8 @@ export default function Example() {
             {features.map((feature) => (
               <div key={feature.name} className="relative">
                 <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                    <feature.icon className="h-6 w-6" aria-hidden="true" />
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-white text-white">
+                    <feature.icon className="h-12 w-12" aria-hidden="true" />
                   </div>
                   <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
                 </dt>

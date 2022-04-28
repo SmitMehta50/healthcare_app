@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios'
+import Modal from './Modal'
 // import Nav from './Nav'
 
 
@@ -14,7 +15,9 @@ function Diabetes() {
     const [age, setAge] = useState("");
     const [message, setMessage] = useState("");
     const [prob, setProb] = useState("");
-    const [submit, setSubmit] = useState(false)
+    // const [submit, setSubmit] = useState(false)
+    const [open, setOpen] = useState(false)
+
 
 
     let handleSubmit = async (e) => {
@@ -29,7 +32,7 @@ function Diabetes() {
               DiabetesPedigreeFunction : diabetesPedigreeFunction,
               Age : age
         }
-        setSubmit(true)
+        // setSubmit(true)
 
         await axios.post('https://diabetessapi.herokuapp.com/diabetes', myParams)
         .then(function(response){
@@ -44,20 +47,21 @@ function Diabetes() {
         }).catch((error)=>console.log(error));
       };
 
-      const fileData = () => {
-        if (submit && message && prob){
-        return(
-          <div>
-            <div className="message">Status{message ? <p>{message}</p> : null}</div>
-            <div className="prob">Probability{prob ? <p>{prob/100}</p> : null}</div>
-          </div>
-        );
-      }
-      }
+      // const fileData = () => {
+      //   if (submit && message && prob){
+      //   return(
+      //     <div>
+      //       <div className="message">Status{message ? <p>{message}</p> : null}</div>
+      //       <div className="prob">Probability{prob ? <p>{prob/100}</p> : null}</div>
+            
+      //     </div>
+      //   );
+      // }
+      // }
   return (
     <div>
         <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Diabetes</h1>
-        {fileData()}
+        {/* {fileData()} */}
         <form className='w-full' onSubmit={handleSubmit}>
           <div className='flex flex-wrap mx-3 mb-6'>
             <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
@@ -166,14 +170,29 @@ function Diabetes() {
             </div>
           </div>
           {/* Submit Button */}
+
           <div className='md:flex lg:flex md:items-center lg:items-center'>
             <div className='md:w-1/3'></div>
             <div className='md:w-1/3'>
-              <button className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded' type="submit">
+              <button onClick={() => setOpen(true)} className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded' type="submit" >
                 Submit
               </button>
             </div>
           </div>
+
+          {/* Modal */}
+
+          <div>{message ?<Modal
+          open = {open}
+          setOpen = {setOpen}
+          status ={message}
+          prob= {prob}
+          ></Modal>: null}</div>
+
+          {/* <Modal
+          open = {open}
+          setOpen = {setOpen}/> */}
+
           
           {/* <div className="message">Status{message ? <p>{message}</p> : null}</div>
           <div className="prob">Probability{prob ? <p>{prob/100}</p> : null}</div> */}

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios'
-import ScrollToTop from './ScroolToTop';
+// import ScrollToTop from './ScroolToTop';
+import Modal from './Modal'
 // import Nav from './Nav'
 
 function Kidney() {
@@ -30,7 +31,8 @@ function Kidney() {
     const [white_blood_cell_count, setWhite_blood_cell_count] = useState("");
     const [pred, setPred] = useState("");
     const [prob, setProb] = useState("");
-    const [submit, setSubmit] = useState(false)
+    // const [submit, setSubmit] = useState(false)
+    const [open, setOpen] = useState(false)
 
     let handleSubmit = async (e) => {
         e.preventDefault();
@@ -60,7 +62,7 @@ function Kidney() {
             sugar: sugar,
             white_blood_cell_count: white_blood_cell_count
         }
-        setSubmit(true)
+        // setSubmit(true)
 
         await axios.post('https://kidneydisease-api.herokuapp.com/kidney', myParams)
         .then(function(response){
@@ -75,26 +77,26 @@ function Kidney() {
         }).catch((error)=>console.log(error));
       };
 
-      const fileData = () => {
-        if (submit){
-        return(
-          <div>
-            <ScrollToTop>
-            <div className="message">Status{pred ? <p>{pred}</p> : null}</div>
-            <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div>
+      // const fileData = () => {
+      //   if (submit){
+      //   return(
+      //     <div>
+      //       <ScrollToTop>
+      //       <div className="message">Status{pred ? <p>{pred}</p> : null}</div>
+      //       <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div>
 
-            </ScrollToTop>
+      //       </ScrollToTop>
             
-          </div>
-        );
-      }
-      }
+      //     </div>
+      //   );
+      // }
+      // }
 
 
   return (
     <div>
       <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Kidney</h1>
-      {fileData()}
+      {/* {fileData()} */}
         <form className='w-full' onSubmit={handleSubmit}>
           <div className='flex flex-wrap mx-3 mb-6'>
             <div className='w-full md:w-1/2 px-3 mb-6 md:mb-0'>
@@ -421,11 +423,19 @@ function Kidney() {
           <div className='md:flex lg:flex md:items-center lg:items-center'>
             <div className='md:w-1/3'></div>
             <div className='md:w-1/3'>
-              <button className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded' type="submit">
+              <button onClick={() => setOpen(true)} className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded' type="submit">
                 Submit
               </button>
             </div>
           </div>
+          {/* Modal */}
+
+          <div>{pred ? <Modal
+          open = {open}
+          setOpen = {setOpen}
+          status ={pred}
+          prob= {Number(prob)*100 }
+          ></Modal> : null}</div>
           {/* <div className="message">Status{pred ? <p>{pred}</p> : null}</div>
           <div className="prob">Probability{prob ? <p>{prob}</p> : null}</div> */}
           
