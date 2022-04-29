@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure, Menu } from '@headlessui/react'
+import {  MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -16,7 +16,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className=" z-50 sticky overflow-auto top-0  w-[100%] bg-gray-800">
       {({ open }) => (
         <>
           <div className=" max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -63,18 +63,36 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
+              <div className="hidden space-x-5 sm:block absolute inset-y-0 right-0  items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {/* <button
                   type="button"
                   className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                  LOGIN */}
+                  {/* <span className="sr-only">View notifications</span>
+                  <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
+                {/* </button> */}
+
+                <a
+                  key='login'
+                  href='/login'
+                  className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
+                >
+                  LOGIN
+                </a>
+
+                <a
+                  key='signup'
+                  href='/signup'
+                  className=' bg-gray-300 hover:bg-gray-700 text-black px-3 py-2 rounded-md text-sm font-medium'
+                >
+                  SIGNUP
+                </a>
+
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="ml-3 relative">
-                  <div>
+                 <Menu as="div" className="ml-3 relative">
+                  {/*<div>
                     <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
                       <img
@@ -125,7 +143,7 @@ export default function Example() {
                         )}
                       </Menu.Item>
                     </Menu.Items>
-                  </Transition>
+                  </Transition> */}
                 </Menu>
               </div>
             </div>
@@ -147,6 +165,20 @@ export default function Example() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <a
+                key='login'
+                href='/login'
+                className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+              >
+                LOGIN
+              </a>
+              <a
+                key='signup'
+                href='/signup'
+                className='bg-gray-300 hover:bg-gray-700 text-black block px-3 py-2 rounded-md text-base font-medium'
+              >
+                SIGNUP
+              </a>
             </div>
           </Disclosure.Panel>
         </>
