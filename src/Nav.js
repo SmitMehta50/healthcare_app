@@ -23,7 +23,7 @@ export default function Example() {
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 ">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -41,10 +41,12 @@ export default function Example() {
                   />
                   <img
                     className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                     alt="Workflow"
                   />
+                  
                 </div>
+                {/* <h1 className=' text-white hover:text-white px-3 py-2 rounded-md text-md font-extrabold'>Health</h1> */}
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -84,7 +86,7 @@ export default function Example() {
                 <a
                   key='signup'
                   href='/signup'
-                  className=' bg-gray-300 hover:bg-gray-700 text-black px-3 py-2 rounded-md text-sm font-medium'
+                  className=' bg-indigo-200 hover:bg-indigo-400 text-black px-3 py-2 rounded-md text-sm font-medium'
                 >
                   SIGNUP
                 </a>
@@ -175,7 +177,7 @@ export default function Example() {
               <a
                 key='signup'
                 href='/signup'
-                className='bg-gray-300 hover:bg-gray-700 text-black block px-3 py-2 rounded-md text-base font-medium'
+                className='bg-indigo-200 hover:bg-indigo-400 text-black block px-3 py-2 rounded-md text-base font-medium'
               >
                 SIGNUP
               </a>
