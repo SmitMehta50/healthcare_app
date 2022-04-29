@@ -94,7 +94,7 @@ function Gendisease() {
       <form onSubmit={handleSubmit}>
         <div className='flex justify-center'>
           <Select
-              className="dropdown w-[50%]"
+              className="dropdown w-[80%] lg:w-[50%]"
               placeholder="Select Option"
               value={data.filter(obj => selectedValue.includes(obj.value))} // set selected values
               options={data} // set list of the data
