@@ -48,7 +48,7 @@ function Home() {
     },[]);
 
   return (
-    <div>
+    <div className=''>
       <div className='grid lg:grid-cols-2 bg-contain'>
           <main className=" w-auto pt-16 lg:pt-32 px-10 ">
             <div className=" sm:text-center lg:text-left ">

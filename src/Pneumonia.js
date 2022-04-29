@@ -90,8 +90,8 @@ function Pneumonia() {
     
     
   return (
-    <div>
-        <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Pneumonia</h1>
+    <div className='mb-10'>
+        <h1 className='text-center mt-6 mb-10 text-xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl'>Pneumonia Detection</h1>
         
 			{/* <h3>
 			File Upload using React!

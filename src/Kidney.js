@@ -94,8 +94,8 @@ function Kidney() {
 
 
   return (
-    <div>
-      <h1 className='text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl'>Kidney</h1>
+    <div className='py-10'>
+      <h1 className='text-center  mb-10 text-xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl'>Kidney Disease Prediction</h1>
       {/* {fileData()} */}
         <form className='w-full' onSubmit={handleSubmit}>
           <div className='flex flex-wrap mx-3 mb-6'>
