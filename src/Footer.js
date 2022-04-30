@@ -110,7 +110,7 @@ function Footer() {
       </a>
     </div>
     <form action="">
-      <div className=" md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
+      <div className=" sm:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
         <div className="md:ml-auto md:mb-6">
           <p className="text-gray-800">
             <strong>Sign up for our services</strong>
