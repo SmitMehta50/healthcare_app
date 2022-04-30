@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios'
+// import axios from 'axios'
 // import {Link} from 'react-router-dom';
 import Featuresection from './Featuresection';
 // import Modal from './Modal';
@@ -8,44 +8,44 @@ import Featuresection from './Featuresection';
 import onlinemedicalImg from './assets/onlinemedicalImg.jpg'
 
 function Home() {
-  React.useEffect(()=>{
+  // React.useEffect(()=>{
 
-        axios.get('https://kidneydisease-api.herokuapp.com/kidney')
-        .then(function(response){
-          console.log(response)
-        }).catch((error)=>console.log(error));
+  //       axios.get('https://kidneydisease-api.herokuapp.com/kidney')
+  //       .then(function(response){
+  //         console.log(response)
+  //       }).catch((error)=>console.log(error));
 
-        axios.get('https://diabetessapi.herokuapp.com/diabetes')
-        .then(function(response){
-          console.log(response)
-        }).catch((error)=>console.log(error));
+  //       axios.get('https://diabetessapi.herokuapp.com/diabetes')
+  //       .then(function(response){
+  //         console.log(response)
+  //       }).catch((error)=>console.log(error));
 
-        axios.get('https://diabetessapi.herokuapp.com/generalprediction')
-        .then(function(response){
-          console.log(response)
-        }).catch((error)=>console.log(error));
+  //       axios.get('https://diabetessapi.herokuapp.com/generalprediction')
+  //       .then(function(response){
+  //         console.log(response)
+  //       }).catch((error)=>console.log(error));
 
-        axios.get('https://diabetessapi.herokuapp.com/heart')
-        .then(function(response){
-          console.log(response)
-        }).catch((error)=>console.log(error));
+  //       axios.get('https://diabetessapi.herokuapp.com/heart')
+  //       .then(function(response){
+  //         console.log(response)
+  //       }).catch((error)=>console.log(error));
 
-        axios.get('https://pneumonia-apis.herokuapp.com/')
-        .then(function(response){
-          console.log(response)
-        }).catch((error)=>console.log(error));
+  //       axios.get('https://pneumonia-apis.herokuapp.com/')
+  //       .then(function(response){
+  //         console.log(response)
+  //       }).catch((error)=>console.log(error));
 
-        axios.get('https://kidneydisease-api.herokuapp.com/liver')
-        .then(function(response){
-          console.log(response)
-        }).catch((error)=>console.log(error));
+  //       axios.get('https://kidneydisease-api.herokuapp.com/liver')
+  //       .then(function(response){
+  //         console.log(response)
+  //       }).catch((error)=>console.log(error));
 
-        axios.get('https://kidneydisease-api.herokuapp.com/hospitaldata')
-        .then(function(response){
-          console.log(response)
-        }).catch((error)=>console.log(error));
+  //       axios.get('https://kidneydisease-api.herokuapp.com/hospitaldata')
+  //       .then(function(response){
+  //         console.log(response)
+  //       }).catch((error)=>console.log(error));
 
-    },[]);
+  //   },[]);
 
   return (
     <div className=''>

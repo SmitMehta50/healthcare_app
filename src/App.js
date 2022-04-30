@@ -12,25 +12,37 @@ import Nav from './Nav'
 import Patient from './Patient'
 import Doctor from './Doctor'
 import Test from './test';
+import Signin from './Signin';
+import Signup from './Signup';
+import Account from './Account';
+import { AuthContextProvider } from './context/AuthContext';
+import ProtectedRoute from './ProtectedRoute';
+import Logout from './Logout';
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
-      <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/diabetes" element={<Diabetes/>} />
-        <Route exact path="/pneumonia" element={<Pneumonia/>} />
-        <Route exact path="/generaldisease" element={<Gendisease/>} />
-        <Route exact path="/heart" element={<Heart/>} />
-        <Route exact path="/kidney" element={<Kidney/>} />
-        <Route exact path="/liver" element={<Liver/>} />
-        <Route exact path="/patient" element={<Patient/>} />
-        <Route exact path="/doctor" element={<Doctor/>} />
-        <Route exact path="/getlocation" element={<Test/>} />
-        
-        
-      </Routes>
+      
+      <AuthContextProvider>
+        <Routes>
+          <Route exact path="/" element={<Signin/>} />
+          <Route exact path="/signup" element={<Signup/>} />
+          <Route exact path="/account" element={<ProtectedRoute><Nav/><Account/></ProtectedRoute>} />
+          <Route exact path="/home" element={ <ProtectedRoute><Nav/><Home/></ProtectedRoute>} />
+          <Route exact path="/diabetes" element={<ProtectedRoute><Nav/><Diabetes/></ProtectedRoute>} />
+          <Route exact path="/pneumonia" element={<ProtectedRoute><Nav/><Pneumonia/></ProtectedRoute>} />
+          <Route exact path="/generaldisease" element={<ProtectedRoute><Nav/><Gendisease/></ProtectedRoute>} />
+          <Route exact path="/heart" element={<ProtectedRoute><Nav/><Heart/></ProtectedRoute>} />
+          <Route exact path="/kidney" element={<ProtectedRoute><Nav/><Kidney/></ProtectedRoute>} />
+          <Route exact path="/liver" element={<ProtectedRoute><Nav/><Liver/></ProtectedRoute>} />
+          <Route exact path="/patient" element={<ProtectedRoute><Nav/><Patient/></ProtectedRoute>} />
+          <Route exact path="/doctor" element={<ProtectedRoute><Nav/><Doctor/></ProtectedRoute>} />
+          <Route exact path="/getlocation" element={<ProtectedRoute><Nav/><Test/></ProtectedRoute>} />
+          <Route exact path="/logout" element={<ProtectedRoute><Logout/></ProtectedRoute>} />
+          
+          
+        </Routes>
+      </AuthContextProvider>
 
       {/* <Diabetes/>
       <Heart/>

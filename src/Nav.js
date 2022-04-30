@@ -4,9 +4,9 @@ import { Disclosure, Menu } from '@headlessui/react'
 import {  MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: 'Home', href: '/', current: false },
-  { name: 'About', href: '/', current: false },
-  { name: 'Services', href: '/', current: false },
+  { name: 'Home', href: '/home', current: false },
+  { name: 'About', href: '/about', current: false },
+  { name: 'Services', href: '/services', current: false },
   { name: 'Nearby Hospitals', href: '/getlocation', current: false },
 ]
 
@@ -76,20 +76,21 @@ export default function Example() {
                 {/* </button> */}
 
                 <a
-                  key='login'
-                  href='/login'
+                  key='userinfo'
+                  href='/account'
                   className='text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
                 >
-                  LOGIN
+                  USER INFO
                 </a>
 
                 <a
-                  key='signup'
-                  href='/signup'
+                  key='logout'
+                  href='/logout'
                   className=' bg-indigo-200 hover:bg-indigo-400 text-black px-3 py-2 rounded-md text-sm font-medium'
                 >
-                  SIGNUP
+                  LOGOUT
                 </a>
+                {/* <button key='logout' className=' bg-indigo-200 hover:bg-indigo-400 text-black px-3 py-2 rounded-md text-sm font-medium'  ></button> */}
 
 
                 {/* Profile dropdown */}
@@ -168,18 +169,18 @@ export default function Example() {
                 </Disclosure.Button>
               ))}
               <a
-                key='login'
-                href='/login'
+                key='userinfo'
+                href='/account'
                 className='text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
               >
-                LOGIN
+                USER INFO
               </a>
               <a
-                key='signup'
-                href='/signup'
+                key='logout'
+                href='/'
                 className='bg-indigo-200 hover:bg-indigo-400 text-black block px-3 py-2 rounded-md text-base font-medium'
               >
-                SIGNUP
+                LOGOUT
               </a>
             </div>
           </Disclosure.Panel>
