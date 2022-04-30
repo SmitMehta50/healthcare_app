@@ -177,7 +177,7 @@ export default function Example() {
               </a>
               <a
                 key='logout'
-                href='/'
+                href='/logout'
                 className='bg-indigo-200 hover:bg-indigo-400 text-black block px-3 py-2 rounded-md text-base font-medium'
               >
                 LOGOUT

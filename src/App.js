@@ -18,6 +18,7 @@ import Account from './Account';
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './ProtectedRoute';
 import Logout from './Logout';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -27,17 +28,20 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Signin/>} />
           <Route exact path="/signup" element={<Signup/>} />
-          <Route exact path="/account" element={<ProtectedRoute><Nav/><Account/></ProtectedRoute>} />
-          <Route exact path="/home" element={ <ProtectedRoute><Nav/><Home/></ProtectedRoute>} />
-          <Route exact path="/diabetes" element={<ProtectedRoute><Nav/><Diabetes/></ProtectedRoute>} />
-          <Route exact path="/pneumonia" element={<ProtectedRoute><Nav/><Pneumonia/></ProtectedRoute>} />
-          <Route exact path="/generaldisease" element={<ProtectedRoute><Nav/><Gendisease/></ProtectedRoute>} />
-          <Route exact path="/heart" element={<ProtectedRoute><Nav/><Heart/></ProtectedRoute>} />
-          <Route exact path="/kidney" element={<ProtectedRoute><Nav/><Kidney/></ProtectedRoute>} />
-          <Route exact path="/liver" element={<ProtectedRoute><Nav/><Liver/></ProtectedRoute>} />
-          <Route exact path="/patient" element={<ProtectedRoute><Nav/><Patient/></ProtectedRoute>} />
-          <Route exact path="/doctor" element={<ProtectedRoute><Nav/><Doctor/></ProtectedRoute>} />
-          <Route exact path="/getlocation" element={<ProtectedRoute><Nav/><Test/></ProtectedRoute>} />
+          <Route exact path="/logout" element={<ProtectedRoute><Logout/></ProtectedRoute>} />
+          <Route exact path="/account" element={<ProtectedRoute><Nav/><Account/><Footer/></ProtectedRoute>} />
+          <Route exact path="/home" element={ <ProtectedRoute><Nav/><Home/><Footer/></ProtectedRoute>} />
+          <Route exact path="/diabetes" element={<ProtectedRoute><Nav/><Diabetes/><Footer/></ProtectedRoute>} />
+          <Route exact path="/pneumonia" element={<ProtectedRoute><Nav/><Pneumonia/><Footer/></ProtectedRoute>} />
+          <Route exact path="/generaldisease" element={<ProtectedRoute><Nav/><Gendisease/><Footer/></ProtectedRoute>} />
+          <Route exact path="/heart" element={<ProtectedRoute><Nav/><Heart/><Footer/></ProtectedRoute>} />
+          <Route exact path="/kidney" element={<ProtectedRoute><Nav/><Kidney/><Footer/></ProtectedRoute>} />
+          <Route exact path="/liver" element={<ProtectedRoute><Nav/><Liver/><Footer/></ProtectedRoute>} />
+          <Route exact path="/patient" element={<ProtectedRoute><Nav/><Patient/><Footer/></ProtectedRoute>} />
+          <Route exact path="/doctor" element={<ProtectedRoute><Nav/><Doctor/><Footer/></ProtectedRoute>} />
+          <Route exact path="/getlocation" element={<ProtectedRoute><Nav/><Test/><Footer/></ProtectedRoute>} />
+          <Route exact path="/about" element={<ProtectedRoute><Nav/><Footer/></ProtectedRoute>} />
+          <Route exact path="/services" element={<ProtectedRoute><Nav/><Footer/></ProtectedRoute>} />
           <Route exact path="/logout" element={<ProtectedRoute><Logout/></ProtectedRoute>} />
           
           

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from './context/AuthContext';
 import Alert from '@mui/material/Alert';
+import axios from 'axios'
 
 const Signin = () => {
   const [email, setEmail] = useState('');
@@ -9,6 +10,45 @@ const Signin = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const { signIn } = UserAuth();
+
+   React.useEffect(()=>{
+
+        axios.get('https://kidneydisease-api.herokuapp.com/kidney')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://diabetessapi.herokuapp.com/diabetes')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://diabetessapi.herokuapp.com/generalprediction')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://diabetessapi.herokuapp.com/heart')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://pneumonia-apis.herokuapp.com/')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://kidneydisease-api.herokuapp.com/liver')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+        axios.get('https://kidneydisease-api.herokuapp.com/hospitaldata')
+        .then(function(response){
+          console.log(response)
+        }).catch((error)=>console.log(error));
+
+    },[]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
