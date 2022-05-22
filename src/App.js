@@ -19,6 +19,8 @@ import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './ProtectedRoute';
 import Logout from './Logout';
 import Footer from './Footer';
+import Services from './Services';
+import About from './About';
 
 function App() {
   return (
@@ -40,8 +42,8 @@ function App() {
           <Route exact path="/patient" element={<ProtectedRoute><Nav/><Patient/><Footer/></ProtectedRoute>} />
           <Route exact path="/doctor" element={<ProtectedRoute><Nav/><Doctor/><Footer/></ProtectedRoute>} />
           <Route exact path="/getlocation" element={<ProtectedRoute><Nav/><Test/><Footer/></ProtectedRoute>} />
-          <Route exact path="/about" element={<ProtectedRoute><Nav/><Footer/></ProtectedRoute>} />
-          <Route exact path="/services" element={<ProtectedRoute><Nav/><Footer/></ProtectedRoute>} />
+          <Route exact path="/about" element={<ProtectedRoute><Nav/><About/><Footer/></ProtectedRoute>} />
+          <Route exact path="/services" element={<ProtectedRoute><Nav/><Services/><Footer/></ProtectedRoute>} />
           <Route exact path="/logout" element={<ProtectedRoute><Logout/></ProtectedRoute>} />
           
           

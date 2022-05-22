@@ -81,7 +81,7 @@ function Liver() {
               placeholder="Age"
               onChange={(e) => setAge(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>4.0 {'>'} value {'>'} 90.0 </p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -92,7 +92,7 @@ function Liver() {
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Gender</p>
             </div>
           </div>
 
@@ -107,7 +107,7 @@ function Liver() {
               placeholder="Total_Bilirubin"
               onChange={(e) => setTotal_Bilirubin(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.4 {'>'} value {'>'} 75.0</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -119,7 +119,7 @@ function Liver() {
               placeholder="Direct_Bilirubin"
               onChange={(e) => setDirect_Bilirubin(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>2.816499 {'>'} value {'>'} 19.7 </p>
             </div>
           </div>
 
@@ -134,7 +134,7 @@ function Liver() {
               placeholder="Alkaline_Phosphotase"
               onChange={(e) => setAlkaline_Phosphotase(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>175.5 {'>'} value {'>'} 2110.0 </p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -146,7 +146,7 @@ function Liver() {
               placeholder="Alamine_Aminotransferase"
               onChange={(e) => setAlamine_Aminotransferase(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>10.0 {'>'} value {'>'} 2000.0 </p>
             </div>
           </div>
           <div className='flex flex-wrap mx-3 mb-6'>
@@ -160,7 +160,7 @@ function Liver() {
               placeholder="Aspartate_Aminotransferase"
               onChange={(e) => setAspartate_Aminotransferase(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>10.0 {'>'} value {'>'} 4929.0</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -172,7 +172,7 @@ function Liver() {
               placeholder="Total_Protiens"
               onChange={(e) => setTotal_Protiens(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>2.7 {'>'} value {'>'} 9.6</p>
             </div>
           </div>
 
@@ -187,7 +187,7 @@ function Liver() {
               placeholder="Albumin"
               onChange={(e) => setAlbumin(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.9 {'>'} value {'>'} 5.5 </p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -199,7 +199,7 @@ function Liver() {
               placeholder="Albumin_and_Globulin_Ratio"
               onChange={(e) => setAlbumin_and_Globulin_Ratio(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.3 {'>'} value {'>'} 2.8 </p>
             </div>
           </div>
 

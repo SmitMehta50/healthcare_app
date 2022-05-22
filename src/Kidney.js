@@ -109,7 +109,7 @@ function Kidney() {
               placeholder="Age"
               onChange={(e) => setAge(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>6.000 {'>'} value {'>'} 83.000</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -122,7 +122,7 @@ function Kidney() {
               placeholder="blood_pressure"
               onChange={(e) => setBlood_pressure(e.target.value)} 
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>50.000 {'>'} value {'>'} 110.000</p>
             </div>
           </div>
 
@@ -137,7 +137,7 @@ function Kidney() {
               placeholder="specific_gravity"
               onChange={(e) => setSpecific_gravity(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.005499 {'>'} value {'>'} 1.025</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -149,7 +149,7 @@ function Kidney() {
               placeholder="albumin"
               onChange={(e) => setAlbumin(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.000 {'>'} value {'>'} 4.000</p>
             </div>
           </div>
 
@@ -164,7 +164,7 @@ function Kidney() {
               placeholder="sugar"
               onChange={(e) => setSugar(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.000 {'>'} value {'>'} 5.000</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -175,7 +175,7 @@ function Kidney() {
                 <option value="abnormal">Abnormal</option>
                 <option value="normal">Normal</option>
               </select>
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
           </div>
           <div className='flex flex-wrap mx-3 mb-6'>
@@ -188,7 +188,7 @@ function Kidney() {
                 <option value="abnormal">Abnormal</option>
                 <option value="normal">Normal</option>
               </select>
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -199,7 +199,7 @@ function Kidney() {
                 <option value="present">Present</option>
                 <option value="notpresent">Notpresent</option>
               </select>
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
           </div>
 
@@ -213,7 +213,7 @@ function Kidney() {
                 <option value="present">Present</option>
                 <option value="notpresent">Notpresent</option>
               </select>
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -226,7 +226,7 @@ function Kidney() {
               placeholder="blood_glucose_random"
               onChange={(e) => setBlood_glucose_random(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>70.000 {'>'} value {'>'} 490.000</p>
             </div>
           </div>
 
@@ -241,7 +241,7 @@ function Kidney() {
               placeholder="blood_urea"
               onChange={(e) => setBlood_urea(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>10.000 {'>'} value {'>'} 309.000</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -254,7 +254,7 @@ function Kidney() {
                 placeholder="serum_creatinine"
                 onChange={(e) => setSerum_creatinine(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.400 {'>'} value {'>'} 15.200</p>
             </div>
           </div>
 
@@ -269,7 +269,7 @@ function Kidney() {
               placeholder="sodium"
               onChange={(e) => setSodium(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>111.000 {'>'} value {'>'} 150.000</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -282,7 +282,7 @@ function Kidney() {
               placeholder="potassium"
               onChange={(e) => setPotassium(e.target.value)} 
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs'>2.500 {'>'} value {'>'}47.000</p>
             </div>
           </div>
 
@@ -297,7 +297,7 @@ function Kidney() {
               placeholder="haemoglobin"
               onChange={(e) => setHaemoglobin(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>3.100 {'>'} value {'>'} 17.800</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -310,7 +310,7 @@ function Kidney() {
               placeholder="packed_cell_volume"
               onChange={(e) => setPacked_cell_volume(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>9.000 {'>'} value {'>'} 54.000</p>
             </div>
           </div>
 
@@ -325,7 +325,7 @@ function Kidney() {
               placeholder="white_blood_cell_count"
               onChange={(e) => setWhite_blood_cell_count(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>3800.000 {'>'} value {'>'} 26400.000</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -338,7 +338,7 @@ function Kidney() {
               placeholder="red_blood_cell_count"
               onChange={(e) => setRed_blood_cell_count(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>2.100 {'>'} value {'>'} 8.000</p>
             </div>
           </div>
 
@@ -352,7 +352,7 @@ function Kidney() {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -364,7 +364,7 @@ function Kidney() {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
           </div>
 
@@ -378,7 +378,7 @@ function Kidney() {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -390,7 +390,7 @@ function Kidney() {
                 <option value="poor">Poor</option>
                 <option value="good">Good</option>
               </select>
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
           </div>
 
@@ -404,7 +404,7 @@ function Kidney() {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
 
             <div className='w-full md:w-1/2 px-3'>
@@ -416,7 +416,7 @@ function Kidney() {
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
               </select>
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Option</p>
             </div>
           </div>
           {/* Submit Button */}

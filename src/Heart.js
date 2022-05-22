@@ -172,7 +172,7 @@ function Heart() {
               placeholder="Age"
               onChange={(e) => setAge(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>29.0 {'>'} value {'>'} 77.0 </p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -183,7 +183,7 @@ function Heart() {
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>Select Gender</p>
             </div>
           </div>
 
@@ -198,7 +198,7 @@ function Heart() {
               placeholder="Chest Pain"
               onChange={(e) => setCp(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.0 {'>'} value {'>'} 3.0</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -210,7 +210,7 @@ function Heart() {
               placeholder="Resting Blood Pressure"
               onChange={(e) => setTrestbps(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>94.0 {'>'} value {'>'} 200.0</p>
             </div>
           </div>
 
@@ -225,7 +225,7 @@ function Heart() {
               placeholder="Serum cholestoral in mg/dl"
               onChange={(e) => setChol(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>126.0 {'>'} value {'>'} 564.0 </p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -237,7 +237,7 @@ function Heart() {
               placeholder="Fasting blood sugar > 120 mg/dl"
               onChange={(e) => setFbs(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.0 {'>'} value {'>'} 1.0 </p>
             </div>
           </div>
           <div className='flex flex-wrap mx-3 mb-6'>
@@ -251,7 +251,7 @@ function Heart() {
               placeholder="Resting electrocardiographic"
               onChange={(e) => setRestecg(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.0 {'>'} value {'>'} 2.0</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -263,7 +263,7 @@ function Heart() {
               placeholder="Maximum heart rate"
               onChange={(e) => setThalach(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>71.0 {'>'} value {'>'} 202.0</p>
             </div>
           </div>
 
@@ -278,7 +278,7 @@ function Heart() {
               placeholder="Exercise induced angina"
               onChange={(e) => setExang(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.0 {'>'} value {'>'} 1.0</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -290,7 +290,7 @@ function Heart() {
               placeholder="Old Peak"
               onChange={(e) => setOldpeak(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.0 {'>'} value {'>'} 6.2 </p>
             </div>
           </div>
 
@@ -305,7 +305,7 @@ function Heart() {
               placeholder="ST segment"
               onChange={(e) => setSlope(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.0 {'>'} value {'>'} 2.0 </p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -317,7 +317,7 @@ function Heart() {
               placeholder="Number of major vessels"
               onChange={(e) => setCa(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.0 {'>'} value {'>'} 4.0 </p>
             </div>
           </div>
           <div className='flex flex-wrap mx-3 mb-6'>
@@ -331,7 +331,7 @@ function Heart() {
                placeholder="Thal"
                onChange={(e) => setThal(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.0 {'>'} value {'>'} 3.0 </p>
             </div>
             
           </div>

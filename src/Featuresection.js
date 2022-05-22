@@ -12,37 +12,37 @@ const features = [
   {
     name: 'General Disease Prediction',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Having common sysmptoms? select "General Disease" from above and know the disease you have from most common 41 diseases.',
     icon: GenrealImg,
   },
   {
     name: 'Diabetes Prediction',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Want to know your diabetes status then choose "Diabetes" from above section.',
     icon: DiabetesImg,
   },
   {
     name: 'Pneumonia Prediction',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Having trouble breathing? get your x-ray verified by choosing "Pneumonia" from above section.',
     icon: PneumoniaImg,
   },
   {
     name: 'Heart Disease Prediction',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Is there a problem in your heart?, then choose "Heart" from above section and get yourself check.',
     icon: HeartImg,
   },
   {
     name: 'Liver Disease Prediction',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Recently diagnosed with liver disease? know your liver health status by choosing "Liver" from above section.',
     icon: LiverImg,
   },
   {
     name: 'Kidney Disease Prediction',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Having family history of kidney problem? select "Kidney" from above section and know the health status of your kidney.',
     icon: KidneyImg,
   },
 ]
@@ -56,8 +56,8 @@ export default function Example() {
             A better way towards health
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-            accusamus quisquam.
+          Changing the healthcare system using AI to be more flexible for Doctors and Patients
+          in terms of saving life.
           </p>
         </div>
 

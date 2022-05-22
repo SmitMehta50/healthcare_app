@@ -74,7 +74,7 @@ function Diabetes() {
               placeholder="pregnancies"
               onChange={(e) => setPregnancies(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'> 0.000 {'>'} value {'>'} 17.00</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -86,7 +86,7 @@ function Diabetes() {
               placeholder="glucose"
               onChange={(e) => setGlucose(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.000 {'>'} value {'>'} 199.00</p>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ function Diabetes() {
               placeholder="bloodPressure"
               onChange={(e) => setBloodPressure(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.000 {'>'} value {'>'} 199.00</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -113,7 +113,7 @@ function Diabetes() {
               placeholder="skinThickness"
               onChange={(e) => setSkinThickness(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.000 {'>'} value {'>'} 99.00</p>
             </div>
           </div>
 
@@ -128,7 +128,7 @@ function Diabetes() {
               placeholder="insulin"
               onChange={(e) => setInsulin(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.000 {'>'} value {'>'} 846.00</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -140,7 +140,7 @@ function Diabetes() {
               placeholder="bmi"
               onChange={(e) => setBmi(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.000 {'>'} value {'>'} 67.10</p>
             </div>
           </div>
           <div className='flex flex-wrap mx-3 mb-6'>
@@ -154,7 +154,7 @@ function Diabetes() {
               placeholder="diabetesPedigreeFunction"
               onChange={(e) => setDiabetesPedigreeFunction(e.target.value)}
               />
-              <p className='text-gray-500 text-xs italic'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>0.078 {'>'} value {'>'} 2.42</p>
             </div>
             <div className='w-full md:w-1/2 px-3'>
               <label className='block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2'>
@@ -166,7 +166,7 @@ function Diabetes() {
               placeholder="age"
               onChange={(e) => setAge(e.target.value)}
               />
-              <p className='text-gray-500 text-xs'>Fill out this field</p>
+              <p className='text-gray-500 text-xs italic'>21.000 {'>'} value {'>'} 81.00</p>
             </div>
           </div>
           {/* Submit Button */}
