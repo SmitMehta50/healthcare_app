@@ -13,6 +13,8 @@ function Services() {
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl ">
               Get yourself check before its too late</p>
+              <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl ">
+              To get API service for larger applications/developer usecases contact-us!</p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
               
               <div className="rounded-md shadow">

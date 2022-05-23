@@ -6,7 +6,7 @@ function Footer() {
         <footer className="  w-[100%] text-center text-white   ">
           <div className="container pt-9">
             <div className="flex justify-center mb-9">
-              <a href="#!" className="mr-9 text-gray-800">
+              <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener" className="mr-9 text-gray-800">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -23,7 +23,7 @@ function Footer() {
                   ></path>
                 </svg>
               </a>
-              <a href="#!" className="mr-9 text-gray-800">
+              <a href="https://www.twitter.com/" target="_blank" rel="noreferrer noopener" className="mr-9 text-gray-800">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -40,7 +40,7 @@ function Footer() {
                   ></path>
                 </svg>
               </a>
-              <a href="#!" className="mr-9 text-gray-800">
+              <a href="https://www.gmail.com/" target="_blank" rel="noreferrer noopener" className="mr-9 text-gray-800">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -57,7 +57,7 @@ function Footer() {
                   ></path>
                 </svg>
               </a>
-              <a href="#!" className="mr-9 text-gray-800">
+              <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener" className="mr-9 text-gray-800">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -74,7 +74,7 @@ function Footer() {
                   ></path>
                 </svg>
               </a>
-              <a href="#!" className="mr-9 text-gray-800">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer noopener" className="mr-9 text-gray-800">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -91,7 +91,7 @@ function Footer() {
                   ></path>
                 </svg>
               </a>
-              <a href="#!" className="text-gray-800">
+              <a href="https://www.github.com/" target="_blank" rel="noreferrer noopener" className="text-gray-800">
                 <svg
                   aria-hidden="true"
                   focusable="false"
